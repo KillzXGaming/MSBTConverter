@@ -13,6 +13,8 @@ This will label all attributes and tag info, which will make it much more readab
 Drag/drop a .msbt to the tool to turn into yaml. 
 Drag/drop the yaml back to create a new msbt.
 
+![image](https://github.com/KillzXGaming/MSBTConverter/assets/13475262/7d15b557-c239-4330-89b7-da4fd8cc6852)
+
 ## Credits
 * [Trippixyz](https://github.com/Trippixyz): Project Leader, Programmer, Tester, Github Manager
 * [KillzXGaming](https://github.com/KillzXGaming): Implementation of other msbt types
