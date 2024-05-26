@@ -1,0 +1,4 @@
+[submodule "CLMS"]
+	path = CLMS
+	url = https://github.com/KillzXGaming/CLMS
+	branch = main
