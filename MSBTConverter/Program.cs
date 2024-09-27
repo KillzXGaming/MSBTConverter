@@ -8,19 +8,26 @@ namespace MSBTConverter
     {
         public static void Main(string[] args)
         {
+            args = new string[] { "Tutorial.wmbt" };
+
             string exec_dir = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
             //first search for any message project files
             MSBP message_project = null;
             foreach (var file in Directory.GetFiles(Path.Combine(exec_dir, "MessageProject")))
             {
-                if (file.EndsWith("msbp"))
-                    message_project = new MSBP(File.OpenRead(file), false);
+              //  if (file.EndsWith("msbp"))
+                //    message_project = new MSBP(File.OpenRead(file), false);
             }
 
             foreach (string arg in args)
             {
                 if (arg.EndsWith("msbt"))
+                {
+                    MSBT msbt = new MSBT(File.OpenRead(arg), false);
+                    File.WriteAllText($"{arg}.yaml", msbt.ToYaml(message_project));
+                }
+                if (arg.EndsWith("wmbt"))
                 {
                     MSBT msbt = new MSBT(File.OpenRead(arg), false);
                     File.WriteAllText($"{arg}.yaml", msbt.ToYaml(message_project));
